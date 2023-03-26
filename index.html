@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+    <link rel="stylesheet" href="assets/style.css">
+    <title>Hello, world!</title>
+</head>
+
+<body>
+
+    <!-- navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light">
+        <div class="container">
+            <a class="navbar-brand" href="#">Juinson</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="navbar-nav ml-auto">
+                    <a class="nav-item nav-link" href="#">Home</a>
+                    <a class="nav-item nav-link" href="#">Portfolio</a>
+                    <a class="nav-item nav-link" href="/about.html">about</a>
+                    <a class="tombol btn btn-primary">check-me</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <!-- akhir-navbar -->
+
+    <!-- jumbotron -->
+    <div class="jumbotron jumbotron-fluid">
+        <div class="container">
+            <h1 class="display-4">Work <span>harder</span> and <span>better</span>.<br><span>Life </span>balance</h1>
+            <a href="" class="tombol btn btn-primary">our work</a>
+        </div>
+    </div>
+    <!-- akhir jumbotron -->
+
+    <!-- container -->
+    <div class="container">
+        <!-- info panel -->
+        <div class="row justify-content-center">
+            <div class="col-lg-10 info-panel">
+                <div class="row">
+                    <div class="col-lg">
+                        <img src="/assets/image/from_wpu/employee.png" alt="gambar 1" class="float-left">
+                        <h4>Quotes of the day</h4>
+                        <p id="quote"></p>
+                    </div>
+                    <div class="col-lg">
+                        <img src="/assets/image/from_wpu/hires.png" alt="gambar 2" class="float-left">
+                        <h4>Local Time Date</h4>
+                        <p id="date"></p>
+                    </div>
+                    <div class="col-lg">
+                        <img src="assets/image/from_wpu/weather.png" alt="gambar 3" class="float-left">
+                        <h4>Weather</h4>
+                        <p id="weather"></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- akhir info panel -->
+
+        <!-- working space -->
+        <div class="row working-space">
+            <div class="col-sm">
+                <img src="/assets/image/my-foto/2.jpg" alt="working-space" class="img-fluid">
+            </div>
+            <div class="col-sm">
+                <h3>work <span>harder</span>,<br> work <span>better</span>, <br> Life <span>balance</span>.</h3>
+                <p>
+                    When you have confidence, you can have a lot of fun. Every day brings new choices. Believe in your self. Nothing is imposible, new word itself says <q>i am possible</q>
+                </p>
+                <a href="" class="btn-primary btn tombol">Galery</a>
+            </div>
+        </div>
+        <!-- akhir working space -->
+
+        <!-- testimoni -->
+        <section class="testimoni">
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <q>Kemungkinan terburuk dalam sebuah usaha adalah kegagalan, tapi kabar baiknya kita setidaknya mencoba untuk mengehatui hasil. Keputusan terbaik dalam sebuah kegagalan adalah dengan mencoba lagi, lagi dan lagi</q>
+                </div>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-lg-6 d-flex justify-content-center">
+                    <figure class="figure">
+                        <img src="/assets/image/from_wpu/img1.png" class="figure-img img-fluid rounded-circle" alt="x">
+                    </figure>
+                    <figure class="figure">
+                        <img src="/assets/image/from_wpu/img2.png" class="figure-img img-fluid rounded-circle active" alt="x">
+                        <figcaption class="figure-caption">
+                            <h5>Sasa</h5>
+                            <p>Designer</p>
+                        </figcaption>
+                    </figure>
+                    <figure class="figure">
+                        <img src="/assets/image/from_wpu/img3.png" class="figure-img img-fluid rounded-circle" alt="x">
+                    </figure>
+                </div>
+            </div>
+        </section>
+        <!-- akhir testimoni -->
+    </div>
+    <!-- akhir container -->
+
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>
+</body>
+
+<script>
+    var formattedDate = new Date();
+    var day = formattedDate.getDate();
+    var month = formattedDate.getMonth()
+    var year = formattedDate.getFullYear();
+    var hour = formattedDate.getHours();
+    var minute = formattedDate.getMinutes();
+    var second = formattedDate.getSeconds();
+    month += 1
+    if (month < 10) {
+        month = "0" + month
+    }
+    $(document).ready(function() {
+        $('#date').text(day + "/" + month + "/" + year + " " + hour + ":" + minute + ":" + second);
+        $('#weather').text("coming soon")
+        $('#quote').text("coming soon")
+    })
+</script>
+
+</html>
